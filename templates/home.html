@@ -1,0 +1,14 @@
+<table style="border: 1px solid black;width: 100%;">
+    <thead>
+        <tr>
+            <td style="border-right: 1px solid black;border-bottom: 1px solid black;">Pub Date</td>
+            <td style="border-bottom: 1px solid black;">Link</td>
+        </tr>
+    </thead>
+    {% for post in posts %}
+    <tr>
+        <td style="border-right: 1px solid black;border-bottom: 1px solid black;">{{ post["pub_date"]}}</td>
+        <td style="border-bottom: 1px solid black;"><a href="{{ post['link'] }}" target="_blank">{{ post['link'] }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
